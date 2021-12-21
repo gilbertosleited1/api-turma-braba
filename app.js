@@ -23,6 +23,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 //Chamando as rotas
+require('./interface/http/home')(app);
 require('./interface/http/buscaCep')(app);
 
 //Resolvendo problema de Cors no navegador
